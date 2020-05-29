@@ -1,3 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-# Create your views here.
+
+
+def wall(request):
+    context = {
+
+    }
+    return render(request, 'wall.html', context)
+
+def post_message(request):
+    return redirect('/wall')
+
+def post_comment(request):
+    return redirect('/wall')
